@@ -5,6 +5,8 @@ Netflix-GPT - Project
 -Header
 -LoginForm
 -SignUp Form
+-Formik library for forms
+-Form validations
 
 Step1 - Install React
 
