@@ -1,5 +1,10 @@
 Netflix-GPT - Project
 
+- Create react app
+-Configured tailwind css
+-Header
+-LoginForm
+-SignUp Form
 
 Step1 - Install React
 
@@ -14,6 +19,9 @@ Install tailwind + vite
         -->npm install tailwindcss @tailwindcss/vite
         -->import tailwindcss from '@tailwindcss/vite' in vite file 
 Add @import "tailwindcss"; in css file 
+
+
+Misc- App.js root parent component
 
 Step 3
 Concepts 
