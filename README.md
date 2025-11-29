@@ -7,6 +7,32 @@ Netflix-GPT - Project
 -SignUp Form
 -Formik library for forms
 -Form validations
+-UseRef Hook
+-Form validation
+-Rejex for email & password validation
+-Form - e.prevent.value
+-Authentication for sign in / signUp
+-google firebase
+        --npm install firebase
+        --npm install -g firebase-tools
+        --firebase login
+        --firebase init
+        --npm run build
+        --firebase deploy
+--Create signup user account
+--User validation 
+-Implement sign user api from firebase documentation
+-Created redux store 
+-Redux tool kit 
+        --npm i -D @reduxjs/toolkit
+        --npm i react-redux
+
+Store
+Slice
+-Building browse page after sign in /out 
+Function for sign out
+-Display name 
+-Implemented sign out feature
 
 Step1 - Install React
 
