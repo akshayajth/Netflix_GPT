@@ -33,6 +33,13 @@ Slice
 Function for sign out
 -Display name 
 -Implemented sign out feature
+-bug fix of username & profile pic update
+- redirect user login - redirect login/browser
+if my
+-Unsubscribed to the onUth state changed call back
+-Register tmdb api and create a new app and get access token 
+- Goto doc and get data from tmdb list 
+
 
 Step1 - Install React
 
@@ -74,3 +81,5 @@ Netflix GPT
 
         -Search bar
         -Movie suggestions
+
+Instead of string use constant file
