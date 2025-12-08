@@ -41,6 +41,9 @@ if my
 - Goto doc and get data from tmdb list 
 
 
+-Build video background
+
+
 Step1 - Install React
 
 Install react + vite 

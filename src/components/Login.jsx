@@ -67,7 +67,7 @@ const Login = () => {
             // An error occurred
             // ...
           });
-          console.log("Signed up:", user);
+         
           
         })
         .catch((error) => {

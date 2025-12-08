@@ -1,32 +1,37 @@
-import React, { use } from 'react'
-import { useEffect } from 'react'
-import { useDispatch } from 'react-redux'
-import { API_OPTIONS } from '@/utils/constants'
-import { addTrailerVideo } from '@/utils/moviesSlice'
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { API_OPTIONS } from '@/utils/constants';
+import { addTrailerVideo } from '@/utils/moviesSlice';
 
-const useMovieTrailer = () => {
-
-    const dispatch = useDispatch();
-
-   // fetch the trailer video from the movie database API & updating store with trailer video data 
-  const getMovieVideos = async () => {
-    const data = await fetch(
-        `https://api.themoviedb.org/3/movie/1084242/videos?language=en-US`,
-      API_OPTIONS
-    );
-    const json = await data.json();
-    console.log(json);
-
-    const filterData = json.results.filter(video => video.type === "Trailer");
-    const trailer = filterData.length ? filterData[0] : json.results[0]
-    console.log(trailer);
-    // setTrailerId(trailer.key);
-    dispatch(addTrailerVideo(trailer));
-  };
+const useMovieTrailer = (movieId) => {
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    getMovieVideos();
-  }, [])
-}
+    if (!movieId) return;  
 
-export default useMovieTrailer
+    const getMovieVideos = async () => {
+      const data = await fetch(
+        `https://api.themoviedb.org/3/movie/${movieId}/videos?language=en-US`,
+        API_OPTIONS
+      );
+
+      const json = await data.json();
+    
+
+      if (!json.results?.length) return;
+
+      const trailers = json.results.filter(
+        (video) => video.type === "Trailer"
+      );
+
+      const trailer = trailers.length ? trailers[0] : json.results[0];
+     
+
+      dispatch(addTrailerVideo(trailer)); 
+    };
+
+    getMovieVideos();
+  }, [movieId, dispatch]);
+};
+
+export default useMovieTrailer;
