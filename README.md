@@ -39,9 +39,15 @@ if my
 -Unsubscribed to the onUth state changed call back
 -Register tmdb api and create a new app and get access token 
 - Goto doc and get data from tmdb list 
+-custom hook for now playing movies
+- update store with movie data
+-Planning for main container and seondary container
 
-
--Build video background
+-Build video background main container 
+- Build secondary container 
+-Fetch data for trailer video
+-updtae store with trailer video data
+-Tailwind classes for the ui 
 
 
 Step1 - Install React
