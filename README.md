@@ -44,10 +44,11 @@ if my
 -Planning for main container and seondary container
 
 -Build video background main container 
-- Build secondary container 
 -Fetch data for trailer video
 -updtae store with trailer video data
 -Tailwind classes for the ui 
+
+- Build secondary container 
 
 
 Step1 - Install React
