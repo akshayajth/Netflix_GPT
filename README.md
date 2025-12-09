@@ -42,13 +42,15 @@ if my
 -custom hook for now playing movies
 - update store with movie data
 -Planning for main container and seondary container
-
 -Build video background main container 
 -Fetch data for trailer video
 -updtae store with trailer video data
 -Tailwind classes for the ui 
-
-- Build secondary container 
+- Build secondary container
+-Build movie list 
+-Build movie card
+-TMDB Image CDN Url
+-
 
 
 Step1 - Install React
