@@ -16,14 +16,14 @@ const Header = () => {
   const user = useSelector(store => store.user)
   const handleSignOut = () => {
     signOut(auth)
-    .then(() => {
-     
-    }).catch((error) => {
-      // An error happened.
-    });
+      .then(() => {
+
+      }).catch((error) => {
+
+      });
   };
   useEffect(() => {
-   const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is signed in, see docs for a list of available properties
         // https://firebase.google.com/docs/reference/js/auth.user
@@ -53,9 +53,9 @@ const Header = () => {
         src={LOGO}
         alt="Netflix Logo"
       />
-
-
-      {user && <div className='flex p-2'>
+      {user && 
+      <div className='flex p-2'>
+        <button className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg'>GPT Search</button>
         <img
           className="w-12 h-12 "
           alt="usericon"
@@ -65,7 +65,6 @@ const Header = () => {
           onClick={handleSignOut}
           className="font-bold text-white">(Sign Out)</button>
       </div>
-
       }
     </div>
   );

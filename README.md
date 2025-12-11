@@ -50,7 +50,7 @@ if my
 -Build movie list 
 -Build movie card
 -TMDB Image CDN Url
--
+-GPT Search feature in Header
 
 
 Step1 - Install React

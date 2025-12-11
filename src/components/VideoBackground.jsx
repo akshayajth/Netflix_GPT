@@ -9,7 +9,7 @@ const VideoBackground = ({ movieId }) => {
   useMovieTrailer(movieId);
   if (!trailerVideo) return null;
 
-    const youtubeUrl = `https://www.youtube.com/embed/${trailerVideo.key}?autoplay=1&mute=1`;
+    const youtubeUrl = `https://www.youtube-nocookie.com/embed/${trailerVideo.key}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0`;
 
   return (
     <div className="">
@@ -22,6 +22,8 @@ const VideoBackground = ({ movieId }) => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       />
+        <div className="absolute inset-0 pointer-events-none bg-transparent"></div>
+
     </div>
   );
 };
