@@ -50,7 +50,13 @@ if my
 -Build movie list 
 -Build movie card
 -TMDB Image CDN Url
+-Made browser page with tailwind css
+-GPT Search page
 -GPT Search feature in Header
+-Multilanguage feature in app(Feature)
+-GPT API
+
+
 
 
 -Hindi/ english in website.

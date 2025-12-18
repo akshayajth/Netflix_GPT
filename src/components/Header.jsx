@@ -32,6 +32,8 @@ const Header = () => {
   const handleLanguageChange = (e) => {
    dispatch(  changeLanguage(e.target.value));
   }
+
+  const showGptSearch = useSelector ((store) => store.gpt.showGptSearch)
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
@@ -71,7 +73,8 @@ const Header = () => {
       />
       {user &&
         <div className='flex p-2'>
-          <select className='p-2 m-2 bg-gray-900 text-white' onChange={handleLanguageChange}>
+          {showGptSearch && (
+            <select className='p-2 m-2 bg-gray-900 text-white' onChange={handleLanguageChange}>
             {SUPPORTED_LANGUAGES.map((lang) => (
               <option key =
               {lang.identifier} 
@@ -81,10 +84,12 @@ const Header = () => {
             ))}
             
           </select>
+          )}
           <button className='py-2 px-4 mx-4 my-2 bg-purple-800 text-white rounded-lg'
           onClick={handleGptSearchClick}
           >
-            GPT Search
+
+            {showGptSearch ? "Homepage" : "GPT Search"}
           </button>
           <img
             className="w-12 h-12 "
