@@ -53,6 +53,9 @@ if my
 -GPT Search feature in Header
 
 
+-Hindi/ english in website.
+
+
 Step1 - Install React
 
 Install react + vite 

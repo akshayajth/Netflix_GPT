@@ -12,9 +12,9 @@ const VideoBackground = ({ movieId }) => {
     const youtubeUrl = `https://www.youtube-nocookie.com/embed/${trailerVideo.key}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0`;
 
   return (
-    <div className="">
+    <>
       <iframe
-        className="w-screen aspect-video"
+        className="absolute inset-0 w-full h-full object-cover -z-10"
         src={youtubeUrl}
         title="YouTube video player"
         frameBorder="0"
@@ -24,7 +24,7 @@ const VideoBackground = ({ movieId }) => {
       />
         <div className="absolute inset-0 pointer-events-none bg-transparent"></div>
 
-    </div>
+    </>
   );
 };
 export default VideoBackground

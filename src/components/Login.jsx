@@ -10,7 +10,7 @@ import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "@/utils/userSlice.jsx";
 import { USER_AVATAR } from "../utils/constants.jsx";
-
+import { BG_URL } from '@/utils/constants';
 
 const Login = () => {
   const [isSignForm, setIsSignInForm] = useState(true);
@@ -19,7 +19,7 @@ const Login = () => {
   const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
- 
+
   const dispatch = useDispatch();
 
   const handleButtonClick = () => {
@@ -49,26 +49,26 @@ const Login = () => {
             displayName: name.current?.value || "",
             photoURL: USER_AVATAR
           })
-          
-          .then(() => {
 
-            const { uid, email, displayName,photoURL
-                             } = auth.currentUser;
-                            dispatch(addUser({
-                                uid: uid,
-                                email: email,
-                                displayName: displayName,
-                                photoURL: user.photoURL,
-                            }));
-           
-          })
-          
-          .catch((error) => {
-            // An error occurred
-            // ...
-          });
-         
-          
+            .then(() => {
+
+              const { uid, email, displayName, photoURL
+              } = auth.currentUser;
+              dispatch(addUser({
+                uid: uid,
+                email: email,
+                displayName: displayName,
+                photoURL: user.photoURL,
+              }));
+
+            })
+
+            .catch((error) => {
+              // An error occurred
+              // ...
+            });
+
+
         })
         .catch((error) => {
           setErrorMessage(error.code + " - " + error.message);
@@ -78,7 +78,7 @@ const Login = () => {
       signInWithEmailAndPassword(auth, emailValue, passwordValue)
         .then((userCredential) => {
           const user = userCredential.user;
-          
+
         })
         .catch((error) => {
           setErrorMessage(error.code + " - " + error.message);
@@ -96,7 +96,7 @@ const Login = () => {
       <Header />
       <div className="absolute">
         <img
-          src="https://assets.nflxext.com/ffe/siteui/vlv3/6fd9d446-cd78-453a-8c9c-417ed3e00422/web/IN-en-20251117-TRIFECTA-perspective_2fe4e381-977f-49fd-a7f4-1da0bcf09429_large.jpg"
+          src={BG_URL}
           alt="Netflix Login Banner"
         />
       </div>
