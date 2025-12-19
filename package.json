@@ -19,6 +19,7 @@
     "clsx": "^2.1.1",
     "firebase": "^12.6.0",
     "lucide-react": "^0.545.0",
+    "openai": "^6.14.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "react-redux": "^9.2.0",
